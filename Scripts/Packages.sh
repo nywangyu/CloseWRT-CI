@@ -78,16 +78,8 @@ UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "gecoosac luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
-update_golang() {
-    if [[ -d ./feeds/packages/lang/golang ]]; then
-        echo "正在更新 golang 软件包..."
-        \rm -rf ./feeds/packages/lang/golang
-        if ! git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang; then
-            echo "错误：克隆 golang 仓库 https://github.com/sbwml/packages_lang_golang 失败" >&2
-            exit 1
-        fi
-    fi
-}
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 #更新软件包版本
 UPDATE_VERSION() {
