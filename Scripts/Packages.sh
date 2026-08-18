@@ -75,7 +75,7 @@ UPDATE_PACKAGE "quickstart" "kenzok8/jell" "main" "pkg" "quickstart luci-app-qui
 UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "gecoosac luci-app-timewol luci-app-wolplus"
+UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "axonhub gecoosac sing-box luci-app-homeproxy luci-app-timewol luci-app-wolplus luci-app-wolultra"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 #更新软件包版本
@@ -120,7 +120,7 @@ UPDATE_VERSION() {
 }
 
 #UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
-UPDATE_VERSION "sing-box" "true"
+#UPDATE_VERSION "sing-box" "true"
 #UPDATE_VERSION "tailscale"
 
 #更新golang
